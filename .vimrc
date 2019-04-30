@@ -18,10 +18,19 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
-match WarningMsg '\%>80v.\+'
+"match WarningMsg '\%>80v.\+'
 
 set hls
 noremap <ENTER> <ESC>:nohlsearch<ENTER>
+nnoremap Y y$
+
+" highlight tabs and trailing spaces
+highlight UnwantedTab ctermbg=red guibg=darkred
+highlight TrailSpace guibg=red ctermbg=darkred
+match UnwantedTab /\t/
+match TrailSpace / \+$/
+autocmd ColorScheme * highlight UnwantedTab ctermbg=red guibg=darkred
+autocmd ColorScheme * highlight TrailSpace guibg=red ctermbg=darkred
 
 colorscheme koehler
 
