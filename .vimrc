@@ -39,6 +39,8 @@ au BufRead,BufNewFile *.autobuild set ft=ruby
 au BufRead,BufNewFile *.dts set ft=xml
 au BufRead,BufNewFile *.launch set ft=xml
 
+set clipboard=unnamedplus
+
 "" install Plug (a plugin manager)
 "if empty(glob('~/.vim/autoload/plug.vim'))
 "    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
